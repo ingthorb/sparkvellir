@@ -1,7 +1,7 @@
-from django.conf.urls import  url
-from . import views
+from django.urls import path
+from sparkvellir.views import index, detailed
 
 urlpatterns = [
-    url('<str:city_name>', views.detailed, name='detailed'),
-    url(r'', views.index, name='index'),
-];
+    path('<slug:city>/', detailed),
+    path('', index),
+]
