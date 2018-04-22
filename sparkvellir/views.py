@@ -7,8 +7,9 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'sparkvellir/index.html')
 
-def detailed(request, city_name, street_name):
+def detailed(request, city_name):
     # Fetch information about the Field here!
+    
     context = {
         'City': city_name,
         'Street': street_name
