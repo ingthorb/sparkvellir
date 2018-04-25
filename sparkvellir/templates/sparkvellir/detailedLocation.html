@@ -1,10 +1,10 @@
 {% extends 'sparkvellir/layout.html' %}
 
 {% block content %}
-<h2>{{City}}</h1>
-    <div>
-        <p>This will be the details about the field</p>
-    </div>
+<h1>{{Region.country_part}}</h1>
+    {% for town in Towns_list %}
+        <li>{{ town }}</li>
+    {% endfor %}
     <div>
         <p>Here will be a photo</p>
     </div>

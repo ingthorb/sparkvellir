@@ -1,20 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-        <title>Testing</title>
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <body>
-        	<header class="container center-align">
-                <h1>Tests</h1>
-            </header>
-            <div class="container">
-                {% block content %}
-                {% endblock %}
-            </div>
-    </body>
+	{% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'sparkvellir/css/style.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <title>Sparkvellir</title>
+</head>
+<body>
+  <header class="container center-align">
+    <h1>Sparkvellir</h1>
+  </header>
+	<div>
+			<ul>
+				<li >
+					<a href="/austurland">
+						<div>
+							<h3>Austurland</h3>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/nordurland">
+						<div>
+							<h3>Norðurland</h3>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/sudurland">
+						<div>
+							<h3>Suðurland</h3>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/vesturland">
+						<div class="sidebar--title">
+							<h3>Vesturland</h3>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/hofudborgin">
+						<div>
+							<h3>Höfuðborgarsvæðið</h3>
+						</div>
+					</a>
+				</li>
+			</ul>
+	</div>
+    <div class="container">
+		{% block content %}
+		{% endblock %}
+		<br>
+		<a style="display:block" class="center-align" href="/admin">Admin Login</a>
+    </div>
+</body>
 </html>

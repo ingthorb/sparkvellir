@@ -18,7 +18,7 @@ class Field(models.Model):
 
 class Region(models.Model):
     country_part = models.CharField(max_length=30)
-
+    slug = models.CharField(max_length=30, default=None, blank=True, null=True)
     def __str__(self):
         return self.country_part
 
